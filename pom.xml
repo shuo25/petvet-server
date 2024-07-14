@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>nacos-client</module>
+        <module>api-common</module>
     </modules>
 
     <properties>
