@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>nacos-client</module>
+        <module>petvet-user</module>
         <module>api-common</module>
     </modules>
 
