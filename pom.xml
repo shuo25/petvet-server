@@ -12,6 +12,7 @@
         <module>nacos-client</module>
         <module>petvet-user</module>
         <module>api-common</module>
+        <module>petvet-system</module>
     </modules>
 
     <properties>

@@ -1,0 +1,12 @@
+server:
+  port: 81
+
+spring:
+  application:
+    name: patvet-system
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        group: DEV_GROUP
+        namespace: petvet
