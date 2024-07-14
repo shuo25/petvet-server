@@ -19,15 +19,30 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+        <!-- 项目版本 -->
+        <petvet.version>1.0-SNAPSHOT</petvet.version>
         <lombok.version>1.18.26</lombok.version>
         <spring.boot.version>3.2.4</spring.boot.version>
         <spring.cloud.version>2023.0.1</spring.cloud.version>
         <spring.cloud.alibaba.version>2023.0.1.0</spring.cloud.alibaba.version>
+        <!-- 数据库驱动 -->
+        <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
+        <dynamic.datasource.version>4.3.0</dynamic.datasource.version>
+        <druid.version>1.2.21</druid.version>
+        <freemarker.version>2.3.32</freemarker.version>
+
+        <!-- 持久层 -->
+        <mybatis-plus.version>3.5.7</mybatis-plus.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- 系统通用模块 -->
+            <dependency>
+                <groupId>com.vet</groupId>
+                <artifactId>api-common</artifactId>
+                <version>${petvet.version}</version>
+            </dependency>
             <!--springboot 3.2.4-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -58,6 +73,42 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <optional>true</optional>
+            </dependency>
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!-- 多数据库框架dynamic-datasource -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot3-starter</artifactId>
+                <version>${dynamic.datasource.version}</version>
+            </dependency>
+            <!-- 整合Druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-3-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- freemarker -->
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+            <!-- 数据库驱动 -->
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

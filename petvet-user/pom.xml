@@ -21,7 +21,6 @@
         <dependency>
             <groupId>com.vet</groupId>
             <artifactId>api-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!--nacos-discovery-->
         <dependency>
