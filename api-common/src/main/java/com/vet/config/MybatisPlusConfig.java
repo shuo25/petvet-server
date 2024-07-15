@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * Date: 2024/7/14 21:00
  */
 @Configuration
-@MapperScan("org.vet.**.mapper")
+@MapperScan("com.vet.**.mapper")
 public class MybatisPlusConfig {
     /**
      * 分页插件
